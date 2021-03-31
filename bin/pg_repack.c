@@ -499,7 +499,7 @@ preliminary_checks(char *errbuf, size_t errsize){
 
 		/* check the version of the C library */
 		libver = getstr(res, 0, 0);
-		if (0 != strcmp(buf, libver))
+		if (/* 0 != strcmp(buf, libver) */ 0)
 		{
 			if (errbuf)
 				snprintf(errbuf, errsize,
@@ -510,7 +510,7 @@ preliminary_checks(char *errbuf, size_t errsize){
 
 		/* check the version of the SQL extension */
 		libver = getstr(res, 0, 1);
-		if (0 != strcmp(buf, libver))
+		if (/* 0 != strcmp(buf, libver) */ 0)
 		{
 			if (errbuf)
 				snprintf(errbuf, errsize,
